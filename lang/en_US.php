@@ -212,6 +212,21 @@ $lang['help_OnUpload'] = '
 <p>An event generated when a new file is uploaded via the admin or frontend interfaces</p>
 <h4>Parameters</h4>
 <ul>
+<li><em>upload_id</em> - The upload id</li>
+<li><em>category</em> - The category name</li>
+<li><em>name</em> - The name of the uploaded file</li>
+<li><em>size</em> - The size of the uploaded file</li>
+<li><em>summary</em> - The short description for the uploaded file (may be empty)</em></li>
+<li><em>description</em> - The long description for the uploaded file (may be empty)</em></li>
+<li><em>author</em> - The author of the uploaded file (if available)</em></li>
+<li><em>ip_address</em> - The internet address of the client that uploaded the file</li>
+</ul>
+';
+$lang['help_OnEditUpload'] = '
+<p>An event generated when a file is updated via the admin or frontend interfaces</p>
+<h4>Parameters</h4>
+<ul>
+<li><em>upload_id</em> - The upload id</li>
 <li><em>category</em> - The category name</li>
 <li><em>name</em> - The name of the uploaded file</li>
 <li><em>size</em> - The size of the uploaded file</li>
@@ -225,8 +240,10 @@ $lang['info_event_ondeletecategory'] = 'Event generated when a category is delet
 $lang['info_event_oncreatecategory'] = 'Event generated when a category is created';
 $lang['info_event_ondownload'] = 'Event generated when a file is downloaded';
 $lang['info_event_onupload'] = 'Event generated when a new file is uploaded';
+$lang['info_event_oneditupload'] = 'Event generated when a file is updated';
 $lang['info_event_onremove'] = 'Event generated when a file is removed';
 $lang['title_usertag_onupload'] = 'User defined tag to call after upload is complete';
+$lang['title_usertag_oneditupload'] = 'User defined tag to call after updating an upload is complete';
 $lang['none'] = 'None';
 $lang['matchesfound'] = 'Matches found';
 $lang['filter'] = 'Filter';

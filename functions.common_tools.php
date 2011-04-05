@@ -402,6 +402,7 @@ function _uploads_AttemptUpload (&$mod, $id, &$params, $returnid)
 
   // send an event
   $parms = array();
+  $parms['upload_id'] = $newid;
   $parms['category'] = $category_name;
   $parms['name'] = $destname;
   $parms['size'] = $result[1]['size'];

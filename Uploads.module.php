@@ -551,6 +551,9 @@ EOT;
 			case 'OnUpload':
 				return $this->Lang('info_event_onupload');
 				break;
+			case 'OnEditUpload':
+				return $this->Lang('info_event_oneditupload');
+				break;
 			case 'OnRemove':
 				return $this->Lang('info_event_onremove');
 				break;

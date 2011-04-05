@@ -293,6 +293,17 @@ foreach( $params as $key => $value )
 $this->Audit( 0, $this->Lang('friendlyname'),
 							$this->Lang('edited', $row['upload_name']) );
 
+# send an event$parms = array();
+$parms['upload_id'] = $params['upload_id'];
+$parms['category'] = $newcategory;
+$parms['name'] = $newname;
+$parms['size'] = isset($files_key) && isset($_FILES[$files_key]) && isset($_FILES[$files_key]['size']) ? $_FILES[$files_key]['size'] : 0;
+$parms['summary'] = $newsummary;
+$parms['description'] = $newdesc;
+$parms['author'] = $newauthor;
+$parms['ip_address'] = getenv("REMOTE_ADDR");
+$this->SendEvent("OnEditUpload", $parms);
+
 # allow new thumbnail to be uploaded
 $tmp = $id.'input_newthumbnail';
 if( isset($_FILES[$tmp]) && !empty($_FILES[$tmp]['name']) &&

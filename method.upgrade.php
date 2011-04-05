@@ -267,6 +267,17 @@ $taboptarray = array ('mysql' => 'TYPE=MyISAM');
 	$sqlarray = $dict->CreateIndexSQL('index_download_fileid',cms_db_prefix().'module_uploads_downloads','file_id');
 	$dict->ExecuteSQLArray($sqlarray);
       }
+
+    case '1.11':
+    case '1.11.1':
+    case '1.11.2':
+    case '1.11.3':
+    case '1.11.4':
+    case '1.11.5':
+    case '1.11.6':
+      {
+	$this->CreateEvent( "OnEditUpload" );
+      }
     }
     // anything past here should be fine.
     return;

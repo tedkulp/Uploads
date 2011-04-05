@@ -229,6 +229,7 @@ if( file_exists($fn) )
 
 // Event handlers
 $this->CreateEvent( "OnUpload" );
+$this->CreateEvent( "OnEditUpload" );
 $this->CreateEvent( "OnRemove" );
 $this->CreateEvent( "OnDownload" );
 $this->CreateEvent( "OnCreateCategory" );
